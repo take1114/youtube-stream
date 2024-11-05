@@ -32,7 +32,7 @@ df = pd.DataFrame({
     })
 st.dataframe(df.style.highlight_min(axis=0))
 
-total = st.number_input("今日のメニューの合計距離は？-->",0)
+total = st.number_input("今日のメニューの合計距離は？-->最大4050ｍまで(Up200m,Down100m込み)",0)
 print(total)
 generate_btn = st.button("生成")
 print(f"generate_button:{generate_btn}")
