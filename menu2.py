@@ -38,7 +38,7 @@ generate_btn = st.button("生成")
 print(f"generate_button:{generate_btn}")
 
 Total = int(w*i+x*j+y*k+z*l+up+down)
-#print(Total)
+print(Total)
 if generate_btn:
     while Total != total:
         i = random.randint(0,10)
