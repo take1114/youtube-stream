@@ -12,7 +12,7 @@ y = 100
 z = 200
 up = 200
 down = 100
-count = 0
+
 i = random.randint(0,10)
 j = random.randint(0,10)
 k = random.randint(0,10)
@@ -38,7 +38,7 @@ generate_btn = st.button("生成")
 print(f"generate_button:{generate_btn}")
 
 Total = int(w*i+x*j+y*k+z*l+up+down)
-
+#print(Total)
 if generate_btn:
     while Total != total:
         i = random.randint(0,10)
@@ -59,12 +59,7 @@ if generate_btn:
             st.write("Down",down,"m")
             st.write("Total",total,"m")  
         else:
-            count += 1
-            if count == 5:
-                st.write("メニュー作成不可能　入力し直してください")
-                st.write("break",count)
-            break
-            
+            print(Total)
 
 
 
