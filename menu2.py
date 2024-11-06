@@ -63,8 +63,8 @@ if generate_btn:
             if count == 5:
                 st.write("メニュー作成不可能　入力し直してください")
                 st.write("break",count)
-                break
-            print(Total)
+            break
+            
 
 
 
