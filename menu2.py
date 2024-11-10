@@ -1,6 +1,8 @@
 import random
 import streamlit as st
 import pandas as pd
+from datetime import date
+
 st.title("水泳メニュ自動生成アプリ")
 st.caption("プロトタイプ")
 st.subheader("内容紹介")
@@ -21,6 +23,11 @@ l = random.randint(0,10)
 syumoku1 = ["Fly","Ba","Br","Fr"]
 syumoku2 = ["IM","Fr","Choice"]
 syumoku3 = ["Fr","Choice","IM"]
+
+d_time = date.today()
+new_years = st.date_input()
+last_day = new_years - d_time
+st.write(f'次の大会まで後{last_day.days}日です。')
 
 st.write("各距離に対する選出種目")
 df = pd.DataFrame({
