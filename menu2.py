@@ -2,6 +2,7 @@ import random
 import streamlit as st
 import pandas as pd
 from datetime import date
+import datetime
 
 st.title("水泳メニュ自動生成アプリ")
 st.caption("プロトタイプ")
@@ -25,7 +26,7 @@ syumoku2 = ["IM","Fr","Choice"]
 syumoku3 = ["Fr","Choice","IM"]
 
 d_time = date.today()
-new_years = st.date_input()
+new_years = st.date_input('次の大会の日を入力してください',datetime.date(2025,1,1))
 last_day = new_years - d_time
 st.write(f'次の大会まで後{last_day.days}日です。')
 
